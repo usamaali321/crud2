@@ -1,18 +1,18 @@
 extends ../layout
 
 block content
-    h1 Add New Customer
+    h1 Add New Order
     form(action="/products/add",method="post")
         .form-group
             label(for="name") Customer Name
             input#name(type="text", class="form-control",name="name")
         .form-group
-            label(for="fee") Price
+            label(for="fee") color requirements
             input#fee(type="text", class="form-control",name="fee")
         .form-group
             label(for="docid") Customer ID
             input#docid(type="text", class="form-control",name="docid")
         .form-group
-            label(for="appointments") bookings 
+            label(for="appointments") bookings details
             input#appointments(type="text", class="form-control",name="appointments")
         input(type="submit", class="btn btn-info")
