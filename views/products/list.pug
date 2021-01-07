@@ -5,14 +5,14 @@ block content
         .col-sm-8
             h1=title
         .col-sm-4
-            a(href="/products/add" class="btn btn-success btn-sm float-right") Add New Customer
+            a(href="/products/add" class="btn btn-success btn-sm float-right") Add New Order
     table.table
         thead
             tr
                 th name
-                th fare
+                th color seat
                 th cusid
-                th Booking
+                th Booking details
                 th actions
         tbody
             each product in products
@@ -24,4 +24,4 @@ block content
                     td 
                         a(href="/products/delete/"+product._id,class="btn btn-danger",style="margin-right:10px") Delete
                         a(href="/products/update/"+product._id,class="btn btn-warning",style="margin-right:10px") Edit
-                        a(href="/products/cart/"+product._id,class="btn btn-info") Add customer order
+                        a(href="/products/cart/"+product._id,class="btn btn-info") Add New order
