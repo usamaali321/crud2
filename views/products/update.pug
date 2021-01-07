@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h1 Update Existing 
+    form(action="/products/update/"+product._id,method="post")
+        .form-group
+            label(for="name") Doctor Name
+            input#name(type="text", class="form-control",name="name", value=product.name)
+        .form-group
+            label(for="fee") Fare
+            input#fee(type="text", class="form-control",name="fee", value=product.fee)
+        .form-group
+            label(for="docid")  ID
+            input#docid(type="text", class="form-control",name="docid", value=product.docid)
+        .form-group
+            label(for="appointments") Bookings
+            input#appointments(type="text", class="form-control",name="appointments", value=product.appointments)
+        input(type="submit", class="btn btn-info")

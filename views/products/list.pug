@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/products/add" class="btn btn-success btn-sm float-right") Add New Customer
+    table.table
+        thead
+            tr
+                th name
+                th fare
+                th cusid
+                th Booking
+                th actions
+        tbody
+            each product in products
+                tr
+                    td=product.name
+                    td=product.fee
+                    td=product.docid
+                    td=product.appointments
+                    td 
+                        a(href="/products/delete/"+product._id,class="btn btn-danger",style="margin-right:10px") Delete
+                        a(href="/products/update/"+product._id,class="btn btn-warning",style="margin-right:10px") Edit
+                        a(href="/products/cart/"+product._id,class="btn btn-info") Add customer order
